@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wunderlust Travel</title>
+</head>
+<body>
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Wunderlust Travel Logo" width="150" height="50">
+        <h1>Wunderlust Travel</h1>
+        <p>Let Wunderlust Travel help you plan the trip of your dreams!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#inspirations">Inspirations</a></li>
+            <li><a href="#special">Special</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section id="destinations">
+            <h2>Destinations</h2>
+            <article>
+                <h3>Majorca</h3>
+                <p>Imagine an island with turquoise blue waters, secret coves, soft golden sands...</p>
+                <picture>
+                    <source srcset="majorca-waves-320w.png 320w, majorca-waves-780w.png 780w, majorca-waves-1024w.png 1024w" sizes="(max-width: 1024px) 100vw, 1024px">
+                    <img src="majorca-waves.png" alt="Waves at Majorca">
+                </picture>
+            </article>
+        </section>
+
+        <section id="plan-trip">
+            <h2>Plan Your Trip</h2>
+            <div>
+                <h3>How to Get There</h3>
+                <a href="#" title="Search for flights">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="150" height="150" viewBox="0 0 24 24" stroke-width="1" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- More sections like Places to Stay, Things to Do, Where to Eat, etc. -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required placeholder="Enter first name">
+                    
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required placeholder="Enter last name">
+
+                    <label for="contact-method">Preferred Contact Method</label>
+                    <select id="contact-method" name="contact-method">
+                        <option>Email</option>
+                        <option>Text</option>
+                        <option>Phone</option>
+                    </select>
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email">
+                    
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Travel Preferences</legend>
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                        <option>Barcelona</option>
+                        <option>Granada</option>
+                        <option>Ibiza</option>
+                        <option>Madrid</option>
+                        <option>Majorca</option>
+                        <option>Seville</option>
+                        <option>Tenerife</option>
+                        <option>Valencia</option>
+                    </select>
+                    
+                    <label for="travel-time">Travel Time</label>
+                    <select id="travel-time" name="travel-time">
+                        <option>Fall</option>
+                        <option>Winter</option>
+                        <option>Spring</option>
+                        <option>Summer</option>
+                        <option>Flexible</option>
+                    </select>
+                </fieldset>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2021 Wunderlust. <a href="#">Privacy Statement</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
