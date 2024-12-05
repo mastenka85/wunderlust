@@ -1,0 +1,475 @@
+/* ANASTASIYA MLYNCHYK */
+/* --------------- CSS RESET --------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #55bcd5;
+    --secondary-color: #f6d64a;
+    --background-color: #ffffff;
+    --text-color: #222222;
+    --highlight-color: #f6d64a;
+    --font-primary: "Montserrat", sans-serif;
+    --font-accent: "Molle", cursive;
+  }
+  
+  /* Utility Classes */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; 
+    border: 0;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  h1,
+  h2 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-family: var(--font-accent);
+    font-size: 2.5rem;
+    color: var(--text-color);
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Header Styling */
+  header {
+    background: linear-gradient(180deg, var(--primary-color), #ffffff);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1px 2%;
+  }
+  
+  #logo img {
+    max-width: 80px;
+  }
+  
+  /* Navigation Menu */
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 60px 2%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  #menu-toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  #menu-toggle label {
+    display: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    background: var(--highlight-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  #menu-toggle ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #menu-toggle ul li {
+    margin: 0 0px;
+  }
+  
+  #menu-toggle ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  #menu-toggle ul li.active a {
+    background: var(--highlight-color);
+    color: #000;
+  }
+  
+  #menu-toggle ul li a:hover {
+    background: #eaeaea;
+  }
+  
+  /* Mobile Menu */
+  @media screen and (max-width: 768px) {
+    #menu-toggle label {
+      display: block;
+    }
+  
+    #menu-toggle ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 20;
+      background: var(--background-color);
+      flex-direction: column;
+    }
+  
+    #menu-toggle ul li {
+      border-bottom: 1px solid var(--text-color);
+      background: var(--primary-color);
+      text-align: center; 
+      padding: 16px;
+     
+      
+    }
+  
+    #menu-toggle ul li a {
+      padding: 5px;
+    }
+  
+    #menu-toggle input[type="checkbox"]:checked ~ ul {
+      display: flex;
+    }
+  }
+   
+    /* Main Content */
+    main {
+      margin: 2rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background-color: var(--background-color, #ffffff);
+    }
+    
+    #intro {
+      display: flex;
+      flex-direction: column;
+      padding: 2em;
+    }
+    
+    #intro h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      background-color: var(--background-color);
+    }
+    
+    /* Image Grid */
+    #img-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      float: right;
+    }
+    
+    #img-grid img,
+    #img-grid picture {
+      width: 100%;
+    }
+    
+    @media (max-width: 768px) {
+      #img-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+    }
+  
+  /* Plan Your Trip Section */
+  #plan {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    text-align: center;
+  }
+  
+  #plan h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  #plan div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #plan section {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 4px;
+  }
+  
+  @media (min-width: 768px) {
+    #plan div {
+      display: flex;
+      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+  /* Testimonials Section */
+  #testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  #testimonials div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  #testimonials h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  #testimonials img {
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  @media (min-width: 768px) {
+    #testimonials div {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  /* About Section */
+  #about {
+    margin-top: 2rem;
+    background-color: #499bd2;
+    padding: 2rem;
+  }
+  
+  #about h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  #about div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; 
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    #about div {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      );  
+      gap: 2rem; 
+    }
+  }
+  
+/* General Form Styling */
+form {
+  display: grid;
+  gap: 1.5rem; 
+  grid-template-columns: 1fr; 
+  padding: 1.5rem;
+  background-color: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+form div {
+  display: grid;
+  gap: 1rem; 
+}
+
+/* Input and Textarea Styling */
+form input,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #9b26b0; 
+  border-radius: 5px;
+  background-color: #ffffff; 
+  color: #4a154b; 
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+form input:focus,
+form select:focus {
+  border-color: #7a1e90; 
+  box-shadow: 0 0 4px #9b26b0; 
+  outline: none; 
+}
+
+form label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333333;
+}
+
+form input[type="submit"] {
+  background-color: #9b26b0; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #7a1e90; 
+}
+
+form input[type="submit"]:active {
+  transform: scale(0.98); 
+}
+
+/* Radio Button Group */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #9b26b0; 
+  border-radius: 5px;
+  background-color: #ffffff; 
+  color: #4a154b; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.radio-group label:hover {
+  background-color: #9b26b0; 
+  color: white; 
+}
+
+.radio-group input[type="radio"] {
+  display: none; 
+}
+
+.radio-group input[type="radio"]:checked + label {
+  background-color: #9b26b0; 
+  color: white; 
+  border-color: #7a1e90; 
+}
+
+/* Custom Select Styling */
+.custom-select {
+  position: relative;
+  display: flex;
+}
+
+.custom-select select {
+  width: 100%;
+  appearance: none; 
+  padding: 0.75rem;
+  border: 1px solid #9b26b0; 
+  border-radius: 5px;
+  background-color: #ffffff; 
+  color: #4a154b; 
+  font-size: 1rem;
+}
+
+.custom-select span.focus {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #9b26b0; 
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  #nums {
+    grid-column: span 2; 
+  }
+
+  form input[type="submit"] {
+    grid-column: span 2; 
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  padding: 1rem;
+  background-color: #D3D3D3; 
+  color: #000000; 
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #9b26b0; 
+  text-decoration: none;
+  margin: 0.5rem; 
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #7a1e90; 
+}
