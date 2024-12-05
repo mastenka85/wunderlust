@@ -21,7 +21,8 @@ Here’s an overview of the folder and file structure for this project:
 ---
 
 ### 2. **Main Page Images**
-- **Majorca Waves**: `images/majorca-waves.png`  
+- **Majorca Waves**: `images/majorca-waves.png`
+- ![majorca-waves](https://github.com/user-attachments/assets/ffec453f-a3df-4e58-9dee-410d15bc221e)
   *Alt Text*: "Turquoise blue waters with white wave caps crashing against a rock cliff."
 - **Majorca Beach**: `images/majorca-beach.png`  
   *Alt Text*: "A calm cove with turquoise waters calmly lapping at a light sand beach."
