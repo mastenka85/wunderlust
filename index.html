@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wunderlust Travel</title>
+    <style>
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <!-- Skip to Main Content Link -->
@@ -50,18 +55,43 @@
                     </svg>
                 </a>
             </div>
+
+            <!-- Additional Subsections -->
+            <section id="places-to-stay">
+                <h3>Places to Stay</h3>
+                <p>Find the best hotels, resorts, and rentals.</p>
+            </section>
+
+            <section id="things-to-do">
+                <h3>Things to Do</h3>
+                <p>Explore the best activities and excursions.</p>
+            </section>
+
+            <section id="where-to-eat">
+                <h3>Where to Eat</h3>
+                <p>Discover the top restaurants and local cuisine.</p>
+            </section>
         </section>
 
-        <!-- More sections like Places to Stay, Things to Do, Where to Eat, etc. -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>What our happy travelers have to say about us.</p>
+        </section>
+
+        <section id="about-destination">
+            <h2>About Your Destination</h2>
+            <p>Learn more about the culture, history, and attractions of your chosen destination.</p>
+        </section>
+
         <section id="contact">
             <h2>Contact Us</h2>
             <form action="#" method="POST">
                 <fieldset>
                     <legend>Contact Information</legend>
-                    <label for="first-name">First Name</label>
+                    <label for="first-name">First Name <span class="required">*</span></label>
                     <input type="text" id="first-name" name="first-name" required placeholder="Enter first name">
                     
-                    <label for="last-name">Last Name</label>
+                    <label for="last-name">Last Name <span class="required">*</span></label>
                     <input type="text" id="last-name" name="last-name" required placeholder="Enter last name">
 
                     <label for="contact-method">Preferred Contact Method</label>
